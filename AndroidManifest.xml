@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.guoyukun.android.glauncher"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+   <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 修改联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="cn.guoyukun.android.glauncher.LauncherActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
